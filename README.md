@@ -1,12 +1,26 @@
-Installation
 
-pip install -r requirements.txt
+# Game Scrapper
+
+Input a game's name and it will search in different webpages the price of it.
 
 
-Run
+## Deployment
 
-python gameSearcher.py
+Ensure you have installed pip.
 
-NOTE: Enter the exact name of the game you want to search.
-      All the games that have a number in their title must remain with it
-      e.g: Dark Souls 3
+To install the needed requirements just run 
+
+```bash
+  pip install -r requirements.txt
+```
+To deploy this project run
+
+```bash
+  python gameSearcher.py
+```
+
+
+## Authors
+
+- [@pablo-2k03](https://www.github.com/pablo-2k03)
+
