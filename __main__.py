@@ -6,7 +6,7 @@ def main():
     
     game = input('Enter the game you want to search: ')
     
-    game = game.replace("'","")
+    
     
     steam_price = searchers.steamScrapper(game)
     eneba_price = searchers.enebaScrapper(game)

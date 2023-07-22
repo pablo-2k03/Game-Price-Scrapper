@@ -26,9 +26,8 @@ class Scrappers:
     
     def steamScrapper(self,game):
 
-        game = game.replace(" ", "-")
         query = pages['steam']+game
-        
+        print(query)
         try:
             response = requests.get(query)
             page_html = response.text
@@ -50,10 +49,11 @@ class Scrappers:
 
 
     def enebaScrapper(self,game):
-        
+        game = game.replace("'","")
         game = game.replace(" ", "-")
         game = game.lower()
         query = 'https://www.eneba.com/es/steam-'+game+'-steam-key-global'
+        print(query)
         try:
             
             response = requests.get(query)
@@ -80,7 +80,7 @@ class Scrappers:
 
 
     def gog_Scrapper(self,game):
-        
+        game = game.replace("'","")
         game = game.replace(" ", "_")
         game = game.lower()
         query = pages['gog']+game
