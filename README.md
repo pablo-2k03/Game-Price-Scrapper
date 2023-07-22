@@ -13,10 +13,10 @@ To install the needed requirements just run
 ```bash
   pip install -r requirements.txt
 ```
-To deploy this project run
+To run this project run
 
 ```bash
-  python gameSearcher.py
+  python __main__.py
 ```
 
 
