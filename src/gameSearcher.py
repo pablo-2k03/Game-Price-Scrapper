@@ -27,7 +27,6 @@ class Scrappers:
     def steamScrapper(self,game):
 
         query = pages['steam']+game
-        print(query)
         try:
             response = requests.get(query)
             page_html = response.text
@@ -53,7 +52,6 @@ class Scrappers:
         game = game.replace(" ", "-")
         game = game.lower()
         query = 'https://www.eneba.com/es/steam-'+game+'-steam-key-global'
-        print(query)
         try:
             
             response = requests.get(query)
