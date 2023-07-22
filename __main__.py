@@ -1,8 +1,5 @@
 from src.gameSearcher import Scrappers
 from utils.helpers import *
-from colorama import init, Fore, Style
-
-init(autoreset=True)  # Initialize colorama to automatically reset colors
 
 def main():
     searchers = Scrappers()
@@ -22,11 +19,7 @@ def main():
               "gog": gog_price
              }
     
-    for i in prices:
-        if prices[i] is None:
-            print(f"{Fore.LIGHTRED_EX}[-] {i.title()} price for {game}: Not found")
-        else:
-            print(f"{Fore.LIGHTGREEN_EX}[+] {i.title()} price for {game}: {prices[i]}€")
+    view_prices(prices,game)
     
     
     

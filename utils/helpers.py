@@ -1,6 +1,8 @@
 import requests
 import re
+from colorama import init, Fore, Style
 
+init(autoreset=True)  #Reset the colors after each print
 
 def quitSpace(string):
     string = string.replace("-", " ")
@@ -45,5 +47,11 @@ def find_first_url_eneba(game):
             return sol
         
 
-
+def view_prices(prices,game):
+    
+    for i in prices:
+        if prices[i] is None:
+            print(f"{Fore.LIGHTRED_EX}[-] {i.title()} price for {game}: Not found")
+        else:
+            print(f"{Fore.LIGHTGREEN_EX}[+] {i.title()} price for {game}: {prices[i]}€")
     
