@@ -30,6 +30,10 @@ def giveFormat(game):
 
 def find_first_url_eneba(game):
     url_to_try = {
+        "epic_games_key": "https://www.eneba.com/es/epic-games-"+game+"-pc-epic-games-key-global",
+        "blizzard_key" : "https://www.eneba.com/es/blizzard-"+game+"-battle-net-key-global",
+        "ea_key": "https://www.eneba.com/es/ea-app-"+game+"-pc-ea-app-key-global",
+        "origin_key": "https://www.eneba.com/es/origin-"+game+"-pc-origin-key-global",
         "uplay_key": "https://www.eneba.com/es/uplay-"+game+"-pc-uplay-key-europe",
         "ubisoft_key": "https://www.eneba.com/es/uplay-"+game+"-pc-ubisoft-connect-key-global",
         "rockstar_key": "https://www.eneba.com/es/rockstar-social-club-"+game+"-premium-online-edition-rockstar-games-launcher-key-europe",
