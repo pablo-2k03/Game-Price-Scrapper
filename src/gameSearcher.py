@@ -36,17 +36,13 @@ class Scrappers:
 
             steam_price = re.findall('<div class="discount_final_price">\d{0,4},\d{0,3}€', page_html)[0]
             
-            #Get only the numbers  
+            #Get only the price digits  
             steam_price = re.findall('\d{0,4},\d{0,3}', steam_price)[0]
             
             
-            game = giveFormat(game)
-            #print('[+] Steam Price for '+game+': '+steam_price+'€')
-            
+            game = giveFormat(game)            
             return steam_price
-        except:
-            
-            game = giveFormat(game)
+        except:   
             return None
 
 
@@ -59,14 +55,16 @@ class Scrappers:
         game = game.lower()
         query = 'https://www.eneba.com/es/steam-'+game+'-steam-key-global'
         try:
+            
             response = requests.get(query)
             if not check_availability(query):
                 response = find_first_url_eneba(game)
+                
             page_html = response.text
             
             eneba_prices = re.findall('\d{0,4},\d{0,3} €',page_html)
-            #Remove xA0 from the price
             
+            #Remove xA0 (special character) from the price
             eneba_prices = [price.replace('\xa0', '') for price in eneba_prices]
             
             #Remove the € symbol
@@ -74,16 +72,10 @@ class Scrappers:
                     
             best_price = eneba_prices[0]
             
-            
             game = giveFormat(game)
-            #print('[+] Eneba Price for '+game+': '+best_price+'€')
-            
             return best_price
             
-        except:
-                
-            game = giveFormat(game)
-            #print('[-] Eneba Price for '+game+': Not found')
+        except:  
             return None
 
 
@@ -106,11 +98,9 @@ class Scrappers:
             
             game = giveFormat(game)
             game = game.replace("_", " ")
-            #print('[+] GOG Price for '+game+': '+best_price+'€')
             
             return best_price
             
-        except Exception as e:
-            
+        except:
             return None
         
