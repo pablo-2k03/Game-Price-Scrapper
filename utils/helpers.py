@@ -1,6 +1,6 @@
 import requests
 import re
-from colorama import init, Fore, Style
+from colorama import init, Fore
 
 init(autoreset=True)  #Reset the colors after each print
 
