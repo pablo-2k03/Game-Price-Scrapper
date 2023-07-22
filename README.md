@@ -2,7 +2,6 @@
 # Game Scrapper
 
 Input a game's name and it will search in different webpages the price of it.
-By now works only with Steam Games
 
 ## Deployment
 
