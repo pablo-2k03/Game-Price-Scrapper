@@ -9,7 +9,6 @@ def quitSpace(string):
     return string
 
 def check_availability(query):
-    
     response = requests.get(query)
     regex_to_find = '<strong>Lo sentimos, agotado'
     
@@ -35,6 +34,7 @@ def find_first_url_eneba(game):
         "ea_key": "https://www.eneba.com/es/ea-app-"+game+"-pc-ea-app-key-global",
         "origin_key": "https://www.eneba.com/es/origin-"+game+"-pc-origin-key-global",
         "uplay_key": "https://www.eneba.com/es/uplay-"+game+"-pc-uplay-key-europe",
+        "second_uplay": "https://www.eneba.com/es/uplay-"+game+"-uplay-key-europe",
         "ubisoft_key": "https://www.eneba.com/es/uplay-"+game+"-pc-ubisoft-connect-key-global",
         "rockstar_key": "https://www.eneba.com/es/rockstar-social-club-"+game+"-premium-online-edition-rockstar-games-launcher-key-europe",
         "remakes": "https://www.eneba.com/es/steam-"+game+"-remake-steam-key-global",
