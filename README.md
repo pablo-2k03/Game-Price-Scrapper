@@ -1,5 +1,5 @@
 
-# Game Scrapper
+# Game Price Scrapper
 
 Input a game's name and it will search in different webpages the price of it.
 
