@@ -30,6 +30,7 @@ def giveFormat(game):
 
 def find_first_url_eneba(game):
     url_to_try = {
+        "ubisoft_key": "https://www.eneba.com/es/uplay-"+game+"-pc-ubisoft-connect-key-global",
         "rockstar_key": "https://www.eneba.com/es/rockstar-social-club-"+game+"-premium-online-edition-rockstar-games-launcher-key-europe",
         "remakes": "https://www.eneba.com/es/steam-"+game+"-remake-steam-key-global",
         "pc_global": "https://www.eneba.com/es/steam-"+game+"-pc-steam-key-global",
